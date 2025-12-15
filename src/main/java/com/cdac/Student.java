@@ -1,0 +1,47 @@
+package com.cdac;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="student")
+public class Student{
+	
+	
+
+	@GeneratedValue(strategy = GenerationType.IDENTITY)		// id ko auto generate karega
+	@Id
+	private int id ;
+	String name;
+	String email;
+	String course;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getCourse() {
+		return course;
+	}
+	public void setCourse(String course) {
+		this.course = course;
+	}
+	
+	
+	
+}
